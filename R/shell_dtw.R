@@ -29,7 +29,13 @@ shell_dtw<- function(D18o,MgCa,show.dtw.plot=FALSE) {
                    keep=TRUE,
                    step.pattern=symmetric2)
 
-  P0 <- as.ggplot(~plot(alignment,
+  P0 <- as.ggplot(~plot(dtw(D18o %>%
+                              mutate(d18o=scale(d18o)) %>%
+                              pull(d18o)*-1,MgCa %>%
+                              mutate(mg_ca=scale(mg_ca)) %>%
+                              pull(mg_ca),
+                            keep=TRUE,
+                            step.pattern=symmetric2),
                   type = "twoway",
                   main="DTW Plot",
                   adj = 0,
