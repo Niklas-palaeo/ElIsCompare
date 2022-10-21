@@ -107,7 +107,8 @@ shell_dtw<- function(D18o,MgCa,show.dtw.plot=FALSE) {
 
 
 if (show.dtw.plot==TRUE) {
-as.ggplot(~plot(alignment,
+as.ggplot(~plot(dtw(D18o_warp * -1, MgCa_warp, keep = TRUE, 
+                    step.pattern = symmetric2),
      type = "twoway",
      main="DTW Plot",
      adj = 0,
