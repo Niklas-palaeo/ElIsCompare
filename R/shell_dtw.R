@@ -107,13 +107,14 @@ shell_dtw<- function(D18o,MgCa,show.dtw.plot=FALSE) {
       
       
       if (show.dtw.plot==TRUE) {
-        as.ggplot(~plot(alignment,
-                        type = "twoway",
-                        main="DTW Plot",
-                        adj = 0,
-                        line=1,
-                        offset = 10)
-        )/P1
+        print("show.dtw.plot does not work yet")
+        # as.ggplot(~plot(alignment,
+        #                 type = "twoway",
+        #                 main="DTW Plot",
+        #                 adj = 0,
+        #                 line=1,
+        #                 offset = 10)
+        # )/P1
       }
       else {
         P1
