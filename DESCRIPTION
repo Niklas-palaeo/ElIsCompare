@@ -1,0 +1,12 @@
+Package: ElIsCompare
+Type: Package
+Title: The packages uses two sequential geochemical records from the same sample and aligns them
+Version: 0.1.0
+Author: Who wrote it
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: The packages uses two sequential geochemical records from the same sample and aligns them.
+    The alignment is done using dynamic-time-warping, which finds the statistically best fit of two sequential records.
+    This kind of alignment is required when the two records are taken using different means of sampling or when two parallelly growing records are sampled (e.g. two sides of the same shell).
+License: Creative Commons CC BY-SA
+Encoding: UTF-8
+LazyData: true
