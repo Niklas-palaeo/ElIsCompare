@@ -29,7 +29,13 @@ shell_dtw<- function(D18o,MgCa,show.dtw.plot=FALSE) {
                    keep=TRUE,
                    step.pattern=symmetric2)
 
-
+  P0 <- as.ggplot(~plot(alignment,
+                  type = "twoway",
+                  main="DTW Plot",
+                  adj = 0,
+                  line=1,
+                  offset = 10)
+  )
 
 
 
@@ -107,14 +113,7 @@ shell_dtw<- function(D18o,MgCa,show.dtw.plot=FALSE) {
 
 
 if (show.dtw.plot==TRUE) {
-as.ggplot(~plot(dtw(D18o_warp * -1, MgCa_warp, keep = TRUE, 
-                    step.pattern = symmetric2),
-     type = "twoway",
-     main="DTW Plot",
-     adj = 0,
-     line=1,
-     offset = 10)
-)/P1
+P0/P1
 }
 else {
   P1
