@@ -54,7 +54,7 @@ shell_dtw<- function(D18o,MgCa,show.dtw.plot=FALSE) {
         group_by(x,proxy) %>%
         summarise(value=mean(value)) %>% #this unifies points that were given the same location
         ungroup() %>%
-        mutate(value=round(value+0.000001*row_number(),5)) %>% #this adds some error to data points that are similar but far away from each other and prevents them to be grouped as one in the grouping step below
+        mutate(value=round(value+0.0001*row_number(),5)) %>% #this adds some error to data points that are similar but far away from each other and prevents them to be grouped as one in the grouping step below
         group_by(proxy,value) %>% # this unifies extra points that were added to fill gaps in the record
         summarise(x=mean(x))
       
